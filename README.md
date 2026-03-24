@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./images/tabstack-github-social.png" alt="TabStack Logo" height="128">
+  <img src="./images/tabstack-github-social.png" alt="TabStack Logo">
  <p align="center">[🇨🇳 中文](README_zh.md) | [🇬🇧 English](README.md)</p>
   <p align="center">A smart and lightweight Chrome extension that helps you declutter your browser using native Chrome Tab Groups.</p>
 </div>
