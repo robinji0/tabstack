@@ -1,8 +1,6 @@
 <div align="center">
-  <img src="./icons/icon-source-512.png" alt="TabStack Logo" width="128" height="128">
-  <h1 align="center">TabStack</h1>
-  <p align="center"><b>Stack tabs. Keep every page.</b></p>
-  <p align="center">[🇨🇳 中文](README_zh.md) | [🇬🇧 English](README.md)</p>
+  <img src="./images/tabstack-github-social.png" alt="TabStack Logo" height="128">
+ <p align="center">[🇨🇳 中文](README_zh.md) | [🇬🇧 English](README.md)</p>
   <p align="center">A smart and lightweight Chrome extension that helps you declutter your browser using native Chrome Tab Groups.</p>
 </div>
 
