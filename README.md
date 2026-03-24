@@ -25,7 +25,7 @@ Manage existing stacks or create new ones instantly from the extension popup. Th
 
 ### 2. Dedicated Manager Dashboard (Deep Control)
 Need more space? Open any stack in the spacious manager dashboard. Drag-and-drop tabs, search efficiently, and manage everything without squeezing into a tiny dropdown.
-![Manager Dashboard](./images/demo2.jpeg)
+![Manager Dashboard](./images/demo2.png)
 
 ### 3. The Result: Clean Native Experience
 This is how your browser looks after using TabStack. All your open tabs are beautifully organized into native Chrome Tab Groups, ready for you to focus.
