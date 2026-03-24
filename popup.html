@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabStack</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="header">
+    <div class="brand-row">
+      <img class="brand-logo" src="icons/icon48.png" alt="TabStack logo">
+      <div class="brand-copy">
+        <div class="brand-title">TabStack</div>
+        <div class="brand-subtitle" id="extTagline"></div>
+      </div>
+      <div class="language-switch" aria-label="Language switch">
+        <button id="langBtnEn" class="lang-option" type="button">EN</button>
+        <button id="langBtnZh" class="lang-option" type="button">中文</button>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <input id="searchInput" type="text" autocomplete="off">
+    </div>
+
+    <div class="toolbar">
+      <button id="selectAllBtn" type="button"></button>
+      <button id="releaseAllBtn" class="danger-ghost" type="button"></button>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="panel-section">
+      <div class="section-head">
+        <div>
+          <h2 id="titleExisting"></h2>
+          <p class="section-hint" id="hintExisting"></p>
+        </div>
+        <span id="stackCountBadge" class="count-badge">0</span>
+      </div>
+      <div id="groupsList" class="group-list"></div>
+      <div id="groupsEmpty" class="empty-state hidden">
+        <div class="empty-state__title" id="emptyExistingTitle"></div>
+        <div class="empty-state__hint" id="emptyExistingHint"></div>
+      </div>
+    </section>
+
+    <section class="panel-section grow-section">
+      <div class="section-head">
+        <div>
+          <h2 id="titleEligible"></h2>
+          <p class="section-hint" id="hintEligible"></p>
+        </div>
+        <span id="eligibleCountBadge" class="count-badge">0</span>
+      </div>
+      <div id="tabsGrid" class="tabs-grid"></div>
+      <div id="tabsEmpty" class="empty-state hidden">
+        <div class="empty-state__title" id="emptyEligibleTitle"></div>
+        <div class="empty-state__hint" id="emptyEligibleHint"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <button id="stackBtn" class="primary-btn" type="button"></button>
+  </footer>
+</div>
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>

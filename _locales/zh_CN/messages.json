@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "TabStack"
+  },
+  "extDesc": {
+    "message": "将标签页收纳进可折叠分组，并在不关闭页面的情况下继续管理。"
+  },
+  "defaultStackName": {
+    "message": "标签收纳"
+  }
+}

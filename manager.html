@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabStack Manager</title>
+  <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+<div class="manager-shell">
+  <header class="manager-header">
+    <div class="manager-brand">
+      <img class="manager-brand__logo" src="icons/icon48.png" alt="TabStack logo">
+      <div class="manager-brand__text">
+        <div class="manager-brand__title" data-i18n="manageWindowTitle"></div>
+        <div class="manager-brand__subtitle" data-i18n="manageWindowSubtitle"></div>
+      </div>
+    </div>
+
+    <div class="manager-hero" id="groupHero">
+      <div class="group-preview" id="groupPreview">
+        <span class="group-preview__mark" id="groupPreviewMark"></span>
+        <span class="group-preview__label" id="groupNameLabel"></span>
+      </div>
+      <div class="manager-hero__meta">
+        <span id="groupCount"></span>
+        <span class="manager-hero__dot">•</span>
+        <span data-i18n="stackTitleAutoHint"></span>
+      </div>
+    </div>
+
+    <div class="manager-actions">
+      <button id="focusGroupBtn" data-i18n="focusGroup" type="button"></button>
+      <button id="dissolveBtn" class="danger-soft" data-i18n="dissolveStack" type="button"></button>
+      <button id="closeBtn" data-i18n="closeManager" type="button"></button>
+    </div>
+  </header>
+
+  <main class="manager-main" id="managerMain">
+    <section class="manager-section">
+      <div class="manager-section__head">
+        <div>
+          <h2 data-i18n="tabsInStack"></h2>
+          <p class="manager-section__hint" id="inStackCountLabel"></p>
+        </div>
+        <button id="removeSelectedBtn" class="danger-soft" data-i18n="removeSelected" type="button"></button>
+      </div>
+      <div class="manager-search">
+        <input id="groupSearchInput" type="text" data-i18n-placeholder="searchGroupPlaceholder" autocomplete="off">
+      </div>
+      <div id="groupTabsList" class="tab-list"></div>
+      <div id="groupTabsEmpty" class="empty-state hidden">
+        <div class="empty-state__title" data-i18n="groupClosed"></div>
+        <div class="empty-state__hint" data-i18n="groupClosedHint"></div>
+      </div>
+    </section>
+
+    <section class="manager-section">
+      <div class="manager-section__head">
+        <div>
+          <h2 data-i18n="availableTabs"></h2>
+          <p class="manager-section__hint" id="availableCountLabel"></p>
+        </div>
+        <button id="addSelectedBtn" class="primary-soft" data-i18n="addSelected" type="button"></button>
+      </div>
+      <div class="manager-search">
+        <input id="availableSearchInput" type="text" data-i18n-placeholder="searchAvailablePlaceholder" autocomplete="off">
+      </div>
+      <div id="availableTabsList" class="tab-list"></div>
+      <div id="availableTabsEmpty" class="empty-state hidden">
+        <div class="empty-state__title" data-i18n="noEligibleTabs"></div>
+        <div class="empty-state__hint" data-i18n="noEligibleTabsHint"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script type="module" src="manager.js"></script>
+</body>
+</html>

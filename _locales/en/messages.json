@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "TabStack"
+  },
+  "extDesc": {
+    "message": "Stack tabs into collapsible groups and manage them without closing pages."
+  },
+  "defaultStackName": {
+    "message": "Stack"
+  }
+}
