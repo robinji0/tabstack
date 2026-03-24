@@ -1,12 +1,12 @@
-# TabStack 📦
+<div align="center">
+  <img src="./icons/icon-source-512.png" alt="TabStack Logo" width="128" height="128">
+  <h1 align="center">TabStack</h1>
+  <p align="center"><b>Stack tabs. Keep every page.</b></p>
+  <p align="center">[🇨🇳 中文](README_zh.md) | [🇬🇧 English](README.md)</p>
+  <p align="center">A smart and lightweight Chrome extension that helps you declutter your browser using native Chrome Tab Groups.</p>
+</div>
 
-[🇨🇳 中文](README_zh.md) | [🇬🇧 English](README.md)
-
-**Stack tabs. Keep every page.**
-
-A smart and lightweight Chrome extension that helps you declutter your browser using native Tab Groups.
-
-![Native Tab Groups](./images/demo3.jpeg)
+<hr />
 
 ## ✨ Key Features
 
@@ -17,22 +17,19 @@ A smart and lightweight Chrome extension that helps you declutter your browser u
 * 🚀 **Native Integration:** Built on top of Chrome's native Tab Groups for a seamless, lightweight, and crash-free experience.
 * 🌐 **Bilingual Support:** Instantly toggle between English and Simplified Chinese at any time.
 
-## 📸 Interface Preview
+## 📸 Interface Preview (Logical Flow)
 
-### 1. Quick Popup Menu
-Manage existing stacks or create new ones instantly from the extension popup.
+### 1. Quick Popup Menu (Your Control Center)
+Manage existing stacks or create new ones instantly from the extension popup. This is where you quickly tidy up your current window.
 ![Popup Menu](./images/demo1.png)
 
-### 2. Dedicated Manager Dashboard
-A spacious window to move tabs in and out, locate stacks, and manage everything without squeezing into a tiny dropdown.
+### 2. Dedicated Manager Dashboard (Deep Control)
+Need more space? Open any stack in the spacious manager dashboard. Drag-and-drop tabs, search efficiently, and manage everything without squeezing into a tiny dropdown.
 ![Manager Dashboard](./images/demo2.jpeg)
 
-## 🛠️ How to Use
-
-1. **Create a Stack:** Click the TabStack icon in your toolbar, select the ungrouped tabs you want to organize, and click "Create new stack".
-2. **Manage a Stack:** Click the "Manage" button on any existing stack in the popup to open the detailed manager dashboard.
-3. **Release a Stack:** Done with a topic? Click "Release" to ungroup the tabs without closing them, returning them to your main browser window.
-4. **Locate a Stack:** Lost your tabs among dozens of open pages? Use the "Locate stack" button in the manager to instantly bring the group to the front.
+### 3. The Result: Clean Native Experience
+This is how your browser looks after using TabStack. All your open tabs are beautifully organized into native Chrome Tab Groups, ready for you to focus.
+![The Final Result in Chrome UI](./images/demo3.jpeg)
 
 ## 📥 Installation (Developer Mode)
 
