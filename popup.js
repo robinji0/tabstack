@@ -14,6 +14,7 @@ import {
 
 const CUSTOM_SVG_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6d28d9"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs><rect x="18" y="18" width="476" height="476" rx="118" fill="url(#bg)"/><g opacity="0.98"><g transform="translate(0 6) rotate(-10 219 180)"><rect x="110" y="98" width="218" height="164" rx="44" fill="#2ee9ff" stroke="white" stroke-width="10"/><rect x="128" y="114" width="182" height="40" rx="18" fill="rgba(255,255,255,0.5)"/></g><g transform="rotate(-2 262 228)"><rect x="152" y="146" width="220" height="164" rx="44" fill="white" stroke="white" stroke-width="10"/><rect x="170" y="162" width="184" height="40" rx="18" fill="#eaf2ff"/></g><g transform="rotate(8 304 276)"><rect x="194" y="194" width="220" height="164" rx="44" fill="#ffa136" stroke="white" stroke-width="10"/><rect x="212" y="210" width="184" height="40" rx="18" fill="#ffd6a5"/></g></g><rect x="98" y="220" width="160" height="72" rx="34" fill="#ffd648" stroke="#fff5c8" stroke-width="8"/><rect x="92" y="254" width="338" height="166" rx="60" fill="#ffbc2e" stroke="#fff5c8" stroke-width="10"/><rect x="112" y="274" width="298" height="130" rx="48" fill="#ffcd4e"/><rect x="356" y="92" width="76" height="76" rx="26" fill="white"/><path d="M394 110l8 12 12 8-12 8-8 12-8-12-12-8 12-8 8-12z" fill="#6d28d9"/><rect x="18" y="18" width="476" height="476" rx="118" fill="none" stroke="rgba(255,255,255,0.27)" stroke-width="6"/></svg>`;
 const STACK_UI_MARK = '⧉️';
+const PAYPAL_DONATION_URL = 'https://www.paypal.com/paypalme/robin326753';
 
 const dict = {
   en: {
@@ -37,6 +38,7 @@ const dict = {
     collapse: 'Collapse',
     manage: 'Manage',
     release: 'Release',
+    sponsor: 'Sponsor',
     confirmReleaseAll: 'Are you sure you want to release all TabStack groups in this window?'
   },
   zh: {
@@ -60,6 +62,7 @@ const dict = {
     collapse: '收起',
     manage: '管理',
     release: '释放',
+    sponsor: '赞助',
     confirmReleaseAll: '确定要释放当前窗口中的全部 TabStack 收纳吗？'
   }
 };
@@ -103,6 +106,7 @@ function updateUITexts() {
   elements.searchInput.placeholder = msg('searchPlaceholder');
   elements.selectAllBtn.textContent = msg('selectAll');
   elements.releaseAllBtn.textContent = msg('releaseAll');
+  elements.sponsorBtn.textContent = msg('sponsor');
   document.getElementById('titleExisting').textContent = msg('existingStacks');
   document.getElementById('hintExisting').textContent = msg('existingStacksHint');
   document.getElementById('emptyExistingTitle').textContent = msg('noStacks');
@@ -408,6 +412,11 @@ function bindEvents() {
     releaseAllManagedGroups().catch(console.error);
   });
 
+  elements.sponsorBtn.addEventListener('click', async () => {
+    await chrome.tabs.create({ url: PAYPAL_DONATION_URL });
+    window.close();
+  });
+
   elements.stackBtn.addEventListener('click', () => {
     createManagedGroup().catch(console.error);
   });
@@ -424,6 +433,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   elements.tabsEmpty = document.getElementById('tabsEmpty');
   elements.eligibleCountBadge = document.getElementById('eligibleCountBadge');
   elements.stackBtn = document.getElementById('stackBtn');
+  elements.sponsorBtn = document.getElementById('sponsorBtn');
   elements.langBtnEn = document.getElementById('langBtnEn');
   elements.langBtnZh = document.getElementById('langBtnZh');
 
